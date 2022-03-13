@@ -1,0 +1,50 @@
+form {
+  margin-top: 150px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  width: 325px;
+  margin: auto;
+  padding: 20px 0px;
+  opacity: 0;
+  box-sizing: border-box;
+
+  h3 {
+    color: #2c3e50;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  input {
+    color: #2c3e50;
+    border: 1px solid lightgray;
+    font-family: "Fredoka";
+    padding: 15px 15px;
+    padding-right: 100px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    button {
+      background: #ff9a76;
+      color: white;
+      border: none;
+      font-family: "Fredoka";
+      font-size: 18px;
+      margin-top: 10px;
+      padding: 10px 30px;
+    }
+  }
+}
+
+.step.active {
+  opacity: 1;
+}
