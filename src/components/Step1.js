@@ -1,10 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 function Step1({ changeStep }) {
-  const step = useRef(null);
-
   return (
-    <div className="step active" ref={step}>
+    <div className="step active">
       <h3>Account Information</h3>
       <input type="text" name="firstname" placeholder="First Name"></input>
       <input type="text" name="lastname" placeholder="Last Name"></input>

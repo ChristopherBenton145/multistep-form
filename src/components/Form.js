@@ -28,16 +28,16 @@ function Form() {
   function changeStep(number) {
     // Checking if you pressed the next or the previous button
     if (number == 1) {
-      steps[currentStep].classList.toggle("active");
-      steps[currentStep].classList.toggle("hidden");
-      steps[currentStep + 1].classList.toggle("active");
+      steps[currentStep].classList.remove("active");
+      steps[currentStep].classList.add("hidden");
+      steps[currentStep + 1].classList.add("active");
+      steps[currentStep + 1].classList.remove("hidden");
       setCurrentStep(prevState => prevState + 1);
     } else {
       steps[currentStep].classList.remove("active");
-      steps[currentStep].classList.remove("hidden");
-    //   steps[currentStep].classList.add("hidden");
-      steps[currentStep - 1].classList.toggle("hidden");
-      steps[currentStep - 1].classList.toggle("active");
+      steps[currentStep].classList.add("hidden");
+      steps[currentStep - 1].classList.remove("hidden");
+      steps[currentStep - 1].classList.add("active");
 
       /*
       steps[currentStep].classList.toggle("active");
