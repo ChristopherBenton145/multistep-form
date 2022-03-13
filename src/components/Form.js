@@ -14,16 +14,6 @@ function Form() {
       form.current.childNodes.forEach(step => localSteps.push(step));
       setSteps(localSteps);
   }, []);
-    
-//   function previous(e) {
-//     setCurrentStep(prevState => prevState - 1);
-//   }
-
-//   function next(e) {
-//     steps[currentStep].classList.toggle("active");
-//     steps[currentStep + 1].classList.toggle("active");
-//     setCurrentStep(prevState => prevState + 1);
-//   }
 
   function changeStep(number) {
     // Checking if you pressed the next or the previous button
@@ -38,17 +28,6 @@ function Form() {
       steps[currentStep].classList.add("hidden");
       steps[currentStep - 1].classList.remove("hidden");
       steps[currentStep - 1].classList.add("active");
-
-      /*
-      steps[currentStep].classList.toggle("active");
-      steps[currentStep].classList.toggle("hidden");
-      steps[currentStep + 1].classList.toggle("active");
-
-      steps[currentStep].classList.toggle("active");
-      steps[currentStep].classList.toggle("hidden");
-      steps[currentStep - 1].classList.toggle("hidden");
-      steps[currentStep - 1].classList.toggle("active");
-      */
       setCurrentStep(prevState => prevState - 1);
     }
   }
