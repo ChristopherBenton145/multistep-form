@@ -9,7 +9,7 @@ function Step3({ changeStep }) {
       <input type="text" name="age" placeholder="Age"></input>
       <div className="buttons">
         <button onClick={() => changeStep(-1)} type="button" className="button-previous">Previous</button>
-        <button onClick={() => changeStep(1)} type="button" className="button-next">Next</button>
+        <button type="submit">Submit</button>
       </div>
     </div>
   );

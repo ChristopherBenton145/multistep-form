@@ -29,9 +29,27 @@ function Form() {
     // Checking if you pressed the next or the previous button
     if (number == 1) {
       steps[currentStep].classList.toggle("active");
+      steps[currentStep].classList.toggle("hidden");
       steps[currentStep + 1].classList.toggle("active");
       setCurrentStep(prevState => prevState + 1);
     } else {
+      steps[currentStep].classList.remove("active");
+      steps[currentStep].classList.remove("hidden");
+    //   steps[currentStep].classList.add("hidden");
+      steps[currentStep - 1].classList.toggle("hidden");
+      steps[currentStep - 1].classList.toggle("active");
+
+      /*
+      steps[currentStep].classList.toggle("active");
+      steps[currentStep].classList.toggle("hidden");
+      steps[currentStep + 1].classList.toggle("active");
+
+      steps[currentStep].classList.toggle("active");
+      steps[currentStep].classList.toggle("hidden");
+      steps[currentStep - 1].classList.toggle("hidden");
+      steps[currentStep - 1].classList.toggle("active");
+      */
+      setCurrentStep(prevState => prevState - 1);
     }
   }
 
@@ -40,26 +58,6 @@ function Form() {
         <Step1 changeStep={changeStep} />
         <Step2 changeStep={changeStep} />
         <Step3 changeStep={changeStep} />
-        {/* <div className="step">
-            <h3>Personal Details 2</h3>
-            <input type="text" name="firstname" placeholder="First Name"></input>
-            <input type="text" name="lastname" placeholder="Last Name"></input>
-            <input type="text" name="age" placeholder="Age"></input>
-            <div className="buttons">
-                <button onClick={(e) => previous(e)} type="button" className="button-previous">Previous</button>
-                <button onClick={(e) => next(e)} type="button" className="button-next">Next</button>
-            </div>
-        </div>
-        <div className="step">
-            <h3>Personal Details 3</h3>
-            <input type="text" name="firstname" placeholder="First Name"></input>
-            <input type="text" name="lastname" placeholder="Last Name"></input>
-            <input type="text" name="age" placeholder="Age"></input>
-            <div className="buttons">
-                <button onClick={(e) => previous(e)} type="button" className="button-previous">Previous</button>
-                <button onClick={(e) => next(e)} type="button" className="button-next">Next</button>
-            </div>
-        </div> */}
     </form>
   );
 }
