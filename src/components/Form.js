@@ -7,12 +7,16 @@ import "../styles/Form.scss";
 function Form() {
   let [currentStep, setCurrentStep] = useState(0);
   let [steps, setSteps] = useState([]);
+  let [stepIcons, setStepIcons] = useState([]);
   const form = useRef(null);
 
   useEffect(() => {
       let localSteps = [];
+      let localStepIcons = [];
       form.current.childNodes.forEach(step => localSteps.push(step));
+      document.querySelector(".progress").childNodes.forEach(stepIcon => localStepIcons.push(stepIcon));
       setSteps(localSteps);
+      setStepIcons(localStepIcons);
   }, []);
 
   function changeStep(number) {
@@ -22,12 +26,14 @@ function Form() {
       steps[currentStep].classList.add("hidden");
       steps[currentStep + 1].classList.add("active");
       steps[currentStep + 1].classList.remove("hidden");
+      stepIcons[currentStep + 1].classList.add("active");
       setCurrentStep(prevState => prevState + 1);
     } else {
       steps[currentStep].classList.remove("active");
       steps[currentStep].classList.add("hidden");
       steps[currentStep - 1].classList.remove("hidden");
       steps[currentStep - 1].classList.add("active");
+      stepIcons[currentStep].classList.remove("active");
       setCurrentStep(prevState => prevState - 1);
     }
   }

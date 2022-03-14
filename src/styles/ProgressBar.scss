@@ -1,0 +1,36 @@
+.progress {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 300px;
+  margin: auto;
+  margin-top: 100px;
+  height: 10px;
+
+  div {
+    position: relative;
+    text-align: center;
+    margin-right: 25px;
+
+    &::before {
+      content: "0";
+      position: absolute;
+      background: #679b9b;
+      color: white;
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .active::before {
+    background-color: #ff9a76;
+  }
+
+  @for $i from 1 to 4 {
+    & :nth-child(#{$i})::before {
+      content: "#{$i}";
+    }
+  }
+}

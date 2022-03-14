@@ -7,7 +7,7 @@ function Step3({ changeStep }) {
       <input type="text" name="notes" placeholder="Notes" autoComplete='off'></input>
       <div className="buttons">
         <button onClick={() => changeStep(-1)} type="button" className="button-previous">Previous</button>
-        <button type="submit">Submit</button>
+        <button type="submit" className="button-submit">Submit</button>
       </div>
     </div>
   );

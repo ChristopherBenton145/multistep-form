@@ -1,7 +1,7 @@
 form {
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 50px;
 
   .step {
     position: absolute;
@@ -59,6 +59,12 @@ form {
           transform: scale(1.075);
           transition: 100ms;
         }
+      }
+
+      .button-submit {
+        background: #b2fefa;
+        background: -webkit-linear-gradient(to right, #0ed2f7, #b2fefa);
+        background: linear-gradient(to right, #0ed2f7, #b2fefa);
       }
     }
   }
