@@ -5,7 +5,7 @@
   <p align="center">
     It's just a form, but with multiple steps and cool animations
     <br />
-    <a href="https://space-landing-page42.netlify.app">https://multistep-form42.netlify.app</a>
+    <a href="https://multistep-form42.netlify.app">https://multistep-form42.netlify.app</a>
   </p>
 </div>
 
